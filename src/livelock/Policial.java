@@ -1,14 +1,14 @@
 package livelock;
 
-public class Police {
+public class Policial {
     
     private boolean moneySent = false;
  
-    public void giveRansom(Criminal criminal) {
+    public void giveRansom(Bandido bandido) {
  
-        while (!criminal.isHostageReleased()) {
+        while (!bandido.isHostageReleased()) {
  
-            System.out.println("Police: waiting criminal to release hostage");
+            System.out.println("Policial: esperando o bandido soltar o refém\n");
  
             try {
                 Thread.sleep(1000);
@@ -17,7 +17,7 @@ public class Police {
             }
         }
  
-        System.out.println("Police: sent money");
+        System.out.println("Policial: entregou o dinheiro");
  
         this.moneySent = true;
     }
@@ -25,5 +25,4 @@ public class Police {
     public boolean isMoneySent() {
         return this.moneySent;
     }
- 
 }

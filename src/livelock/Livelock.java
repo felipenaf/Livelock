@@ -2,21 +2,21 @@ package livelock;
 
 public class Livelock {
     
-    static final Police police = new Police();
+    static final Policial policial = new Policial();
  
-    static final Criminal criminal = new Criminal();
+    static final Bandido bandido = new Bandido();
 
     public static void main(String[] args) {
         Thread t1 = new Thread(new Runnable() {
             public void run() {
-                police.giveRansom(criminal);
+                policial.giveRansom(bandido);
             }
         });
         t1.start();
  
         Thread t2 = new Thread(new Runnable() {
             public void run() {
-                criminal.releaseHostage(police);
+                bandido.releaseHostage(policial);
             }
         });
         t2.start();
