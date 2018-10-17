@@ -6,8 +6,8 @@ public class Policial {
  
     public void giveRansom(Bandido bandido) {
         
-        while (bandido.isHostageReleased()){
-//        while (!bandido.isHostageReleased()) {
+//        while (bandido.isHostageReleased()){
+        while (!bandido.isHostageReleased()) {
  
             System.out.println("Policial: esperando o bandido soltar o refém\n");
  
